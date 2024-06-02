@@ -1,0 +1,122 @@
+//&display=swap&subset=cyrillic-ext
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap")
+// Global SCSS-files imports
+
+@import "./95.reset"
+@import "./96.vars"
+@import "./97.mixin"
+@import "./98.components"
+@import "./99.global"
+
+// Sections or Pages SCSS-files imports
+@import "./01.header"
+@import "./02.trial"
+@import "./04.story"
+@import "./05.conversion"
+@import "./06.template"
+@import "./07.customize"
+@import "./08.platform"
+@import "./09.widget"
+@import "./10.boost"
+@import "./11.feature"
+@import "./12.love"
+@import "./13.customer"
+@import "./14.embed"
+@import "./15.frequently"
+@import "./16.embedSocial"
+@import "./17.today"
+
+@import './94.footer'
+
+///import css-variables from 
+
+// Footer
+.footer
+  max-width: 100%
+  background: black
+  .footer__wrap
+    @include adaptivPadding(65, 25, 1)
+    padding-bottom: 25px
+
+    .footer__top
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding-bottom: 48px
+      @media (max-width: $breakpoint-sm)
+        flex-direction: column
+        gap: 20px
+        align-items: flex-start
+      .footer__logo
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 10px
+        svg
+          flex: 1 0
+          path
+            fill: #FFFFFF
+            transition: all 5s ease
+        &:hover
+          path
+            fill: #cc1515
+            transition: all 0.2s ease
+        p
+          color: #fff
+.footer__menu
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  gap: 20px
+  .menu__section
+    flex: 1
+    padding: 0 20px
+    @media (max-width: $breakpoint-sm)
+      flex: 1 1 45%
+
+    &:first-child
+      margin-right: 20px
+      @media (max-width: $breakpoint-sm)
+        margin-right: 0
+  .menu__title
+    text-wrap: nowrap
+    font-weight: 600
+    color: #fff
+    margin-bottom: 10px
+
+  .menu__list
+    list-style: none
+    padding: 0
+    margin: 0
+  li
+    margin-bottom: 5px
+    font-size: var(--text-sm1)
+    font-weight: 400
+    a
+      color: #fff
+      text-decoration: none
+      &:hover
+        color: #b2f0f8
+        text-decoration: underline
+
+.footer__bottom
+  display: flex
+  align-items: center
+  justify-content: space-between
+  @media (max-width: $breakpoint-sm)
+    flex-direction: column
+  p
+    color: #FFFFFF
+    @media (max-width: $breakpoint-sm)
+      padding-bottom: 20px
+  .footer__icon
+    display: flex
+    column-gap: 18px
+    svg
+      .icon-color
+        transition: all 5s ease
+      &:hover
+        .icon-color
+          fill: #cc1515
+          transition: all 0.3s ease

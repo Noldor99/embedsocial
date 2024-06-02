@@ -1,0 +1,98 @@
+.modify-decoration
+  text-decoration: underline
+.modify-through
+  text-decoration: line-through
+
+.tabs
+  width: 100%
+  .tabs__wrap
+    display: flex
+    justify-content: center
+    margin-bottom: 80px
+    .tabs__header
+      display: flex
+      justify-content: center
+      padding: 5px
+
+      @media (max-width: 768px)
+        flex-wrap: wrap
+
+      &-item
+        cursor: pointer
+        padding: 18px 15px
+        &.active
+          color: #fff
+          background: #111827
+          border-radius: 5px
+
+      &__content
+        margin-top: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 75px
+
+.embed
+  @include adaptivPadding($pcSize: 100, $mobSize: 30,$mode: 1)
+  @include adaptivPadding($pcSize: 150, $mobSize: 50,$mode: 3)
+  background: #eef1f7
+
+.embed__header
+  font-size: var(--text-h2)
+  font-weight: 900
+  text-align: center
+  padding-bottom: 20px
+.embed__subheader
+  font-size: var(--text-h3)
+  text-align: center
+  @include adaptivPadding($pcSize: 80, $mobSize: 50,$mode: 3)
+
+.embed__card-wrap
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  gap: 1.5rem
+  width: 100%
+  @media (max-width: $breakpoint-lg)
+    grid-template-columns: repeat(2, 1fr)
+  @media (max-width: $breakpoint-sm)
+    grid-template-columns: repeat(1, 1fr)
+  @media (max-width: $breakpoint-xs)
+    grid-template-columns: repeat(1, 1fr)
+
+.embed__card
+  padding: 30px
+  @media (max-width: $breakpoint-sm)
+    padding: 15px
+
+  .embed__card-title
+    font-weight: 700
+    font-size: var(--text-h3)
+    line-height: 107%
+    padding-bottom: 20px
+
+  .embed__card-prise
+    padding-bottom: 40px
+    span
+      font-size: var(--text-h1)
+      background: none
+  button
+    margin-bottom: 40px
+    width: 100%
+.embed__list-icon
+  display: flex
+  flex-direction: column
+  gap: 10px
+.embed__icon
+  display: flex
+  align-items: center
+  gap: 10px
+  padding-bottom: 10px
+  .embed__img-wrap
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      max-width: 100%
+      max-height: 100%
+  .embed__icon-text
+    font-size: var(--text-lg)

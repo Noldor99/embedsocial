@@ -1,0 +1,29 @@
+.today
+  @include adaptivPadding($pcSize: 100, $mobSize: 30,$mode: 1)
+  @include adaptivPadding($pcSize: 120, $mobSize: 40,$mode: 3)
+  background: #eef1f7
+.today__header
+  font-size: var(--text-h1)
+  font-weight: 900
+  max-width: 644px
+  text-align: center
+  margin: 0 auto
+  padding-bottom: 20px
+
+.today__subheader
+  max-width: 580px
+  margin: 0 auto
+  text-align: center
+  @include adaptivPadding($pcSize: 50, $mobSize: 30,$mode: 3)
+
+.today__block
+  max-width: 406px
+  margin: 0 auto
+
+.row__bottom
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 10px
+  font-size: var(--text-sm1)
+  margin-top: 20px

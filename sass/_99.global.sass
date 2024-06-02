@@ -1,0 +1,62 @@
+\:root
+  --text-sm1: 0.875rem /* 14px */
+  --text-base: 1rem /* 16px */
+  --text-lg1: 1.25rem /* 20px */
+  --text-h3: 1.5rem /* 24px */
+  --text-h2: 2rem /* 32px */
+  --text-h1: 3rem /* 48px */
+
+@media (max-width: $breakpoint-lg)
+  \:root
+    --text-lg1: 1rem
+    --text-h3: 1.25rem
+    --text-h2: 1.5rem
+    --text-h1: 2rem
+
+body
+  font-family: 'Roboto'
+  font-weight: 400
+  color: #161513
+  font-size: var(--text-base)
+  background: #FFFFFF
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  &.locked
+    overflow: hidden
+  main
+    flex: 1
+
+.container
+  max-width: $containerWidth
+  width: 100%
+  margin: 0 auto
+  padding: 0 20px
+  @media (max-width: $breakpoint-lg)
+    padding: 0 10px
+
+.container-sm
+  max-width: 870px
+  width: 100%
+  margin: 0 auto
+  padding: 0 20px
+  @media (max-width: $breakpoint-lg)
+    padding: 0 10px
+
+a
+  color: black
+  &:hover
+    color: red
+
+span
+  background: #f9ed32
+  padding-left: 6px
+
+.paper__white-shadow
+  border-radius: 10px
+  background: #fff
+  box-shadow: 0 0 10px 0 rgba(156, 160, 172, 0.4)
+
+.paper-gray
+  background: #eef1f7
+  border-radius: 10px

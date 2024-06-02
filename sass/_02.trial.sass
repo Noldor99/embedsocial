@@ -1,0 +1,73 @@
+.trial-section
+  @include adaptivPadding($pcSize: 160, $mobSize: 100,$mode: 1)
+  @include adaptivPadding($pcSize: 55, $mobSize: 30,$mode: 3)
+  background: linear-gradient(180deg, rgba(214, 218, 228, 0) 0%, rgba(214, 218, 228, 0.2) 100%)
+.trial-wrap
+  display: flex
+  align-items: center
+  gap: 20px
+  @include adaptivPadding($pcSize: 75, $mobSize: 30,$mode: 3)
+  @media (max-width: $breakpoint-sm)
+    flex-direction: column
+  .trial-left
+    flex: 0 1 700px
+    @media (max-width: $breakpoint-sm)
+      flex: none
+    .trial-title
+      font-size: var(--text-h1)
+      font-weight: 900
+      line-height: 107%
+      margin-bottom: 20px
+
+    .trial-subtitle
+      line-height: 133%
+      max-width: 580px
+      @include adaptivPadding($pcSize: 50, $mobSize: 30,$mode: 3)
+    form
+      max-width: 356px
+      margin-bottom: 20px
+      @media (max-width: $breakpoint-sm)
+        max-width: 100%
+    .row__bottom
+      display: flex
+      align-items: center
+      gap: 10px
+      font-size: var(--text-sm1)
+  .trial-right
+    display: flex
+    justify-content: center
+    margin: 0 auto
+    .trial__image-wrap
+      max-width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        max-width: 100%
+        height: auto
+        object-fit: contain
+
+.brand
+  margin-bottom: 20px
+  background: #0A0A0A
+.brand__item-wrap
+  padding: 40px 0
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  gap: 20px
+  padding: 15px
+
+.brand-title
+  text-align: center
+  color: #9ca0ac
+  font-variant: all-small-caps
+  padding-bottom: 20px
+.brand__item
+  display: flex
+  align-items: center
+  justify-content: center
+  @media (max-width: $breakpoint-md)
+    flex: 30%
+  @media (max-width: $breakpoint-sm)
+    flex: 45%

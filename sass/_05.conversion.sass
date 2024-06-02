@@ -1,0 +1,86 @@
+.conversion-section
+  padding-bottom: 20px
+  @include adaptivPadding($pcSize: 100, $mobSize: 30,$mode: 1)
+  @include adaptivPadding($pcSize: 150, $mobSize: 50,$mode: 3)
+  background: #ffff
+
+.conversion__title
+  margin: 0 auto
+  font-weight: 600
+  font-size: var(--text-h1)
+  line-height: 120%
+  text-align: center
+  color: #101828
+  padding-bottom: 20px
+
+.conversion__card-wrap
+  display: flex
+  flex-wrap: wrap
+  gap: 1.5rem
+  justify-content: center
+
+.conversion__card
+  display: flex
+  flex-direction: column
+
+  padding: 15px
+  flex: 30%
+  max-width: 420px
+  @media (max-width: $breakpoint-md)
+    flex: 45%
+  @media (max-width: $breakpoint-sm)
+    flex: 100%
+    max-width: 100%
+  .conversion__card-content
+    display: flex
+    height: 100%
+    flex-direction: column
+    .conversion__card-title
+      font-weight: 900
+      font-size: var(--text-h2)
+      line-height: 162%
+      padding-bottom: 30px
+      text-align: start
+    .conversion__block-wrap
+      display: flex
+      align-items: center
+      gap: 10px
+      padding-bottom: 10px
+      .conversion__image-wrap
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+          max-width: 100%
+          max-height: 100%
+      .conversion__icon-text
+        font-weight: 900
+        font-size: var(--text-h3)
+
+.conversion-subheader
+  @include adaptivPadding($pcSize: 100, $mobSize: 30,$mode: 1)
+  font-size: var(--text-h3)
+  font-weight: 900
+  text-align: center
+  margin-bottom: 10px
+.conversion-text
+  max-width: 500px
+  text-align: center
+  margin-bottom: 20px
+  margin: 0 auto
+
+.conversion__person-wrap
+  display: flex
+  align-items: center
+  gap: 10px
+  padding-bottom: 10px
+  justify-content: center
+  margin-top: 20px
+  .conversion__img-wrap
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      max-width: 100%
+      max-height: 100%
+  .conversion__icon-text

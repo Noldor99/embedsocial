@@ -1,0 +1,21 @@
+$startPoint: 900
+
+@mixin adaptiv-padding($pcSize, $mobSize,$point,$mode)
+  $addSize: $mobSize - $pcSize
+  $addSize2: $point - $startPoint
+  $aa: ($addSize2)*($addSize)/(360-$startPoint)+$pcSize
+  @if $mode == 1
+    padding-top: #{$aa+px}
+  @if $mode == 2
+    padding-right: #{$aa+px}
+  @if $mode == 3
+    padding-bottom: #{$aa+px}
+  @if $mode == 4
+    padding-left: #{$aa+px}
+
+@mixin adaptivPadding($pcSize, $mobSize,$mode)
+  @include adaptiv-padding($pcSize,$mobSize,900,$mode)
+  @media (max-width: $breakpoint-sm)
+    @include adaptiv-padding($pcSize,$mobSize,600,$mode)
+  @media (max-width: 360px)
+    @include adaptiv-padding($pcSize,$mobSize,360,$mode)
